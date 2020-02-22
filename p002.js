@@ -5,13 +5,18 @@
 // By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
 const fibSeq = () => {
+	//initialize a Fibonacci array with the first two desired terms
 	let fibs = [1, 2];
+	//loop over the Fib array
 	for (let i = 0; i < fibs.length; i++) {
+		//find the next Fib number in the sequence
 		let nextFib = fibs[i] + fibs[i + 1];
+		//if it's less than 4000000, add it to the array
 		if (nextFib < 4000000) {
 			fibs.push(nextFib);
 		}
 	}
+	//filter for even fibs, then sum them
 	return fibs.filter(n => n % 2 === 0).reduce((a, b) => a + b);
 };
 
