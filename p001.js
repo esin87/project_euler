@@ -15,10 +15,10 @@ const multiplesOf3And5 = () => {
 // console.log(multiplesOf3And5());
 //Answer: 233168
 
-//more concise version with JS array methods
+//slightly more concise version with JS array methods
 const sumOfThreesAndFives = () => {
 	return [...Array(1000).keys()]
-		.filter(x => x % 3 === 0 || x % 5 === 0)
+		.filter((x) => x % 3 === 0 || x % 5 === 0)
 		.reduce((a, b) => a + b);
 };
 
