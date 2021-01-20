@@ -14,16 +14,18 @@ const { performance } = require('perf_hooks');
 // ANSWER: 25164150
 
 const subtractSumOfSquares = (num) => {
-	let sumOfSquares = 0;
-	let squareOfSum = 0;
-	for (let i = 1; i <= num; i++) {
+	let sumOfSquares = 1;
+	let squareOfSum = 1;
+
+	for (let i = 2; i <= num; i++) {
 		sumOfSquares += i ** 2;
 		squareOfSum += i;
 	}
+
 	squareOfSum = squareOfSum ** 2;
 
 	return squareOfSum - sumOfSquares;
 };
 
-console.log(subtractSumOfSquares(10));
-console.log(subtractSumOfSquares(100));
+console.log(subtractSumOfSquares(10)); //2640
+console.log(subtractSumOfSquares(100)); //25164150
