@@ -26,7 +26,7 @@
 // https://stackoverflow.com/questions/17524685/project-euler-10-python/18232279#18232279
 const sumOfPrimes = (upperLimit) => {
 	let sum = 0;
-	let sieve = new Array(upperLimit).fill(true);
+	const sieve = new Array(upperLimit).fill(true);
 	for (let p = 2; p < upperLimit; p++) {
 		if (sieve[p]) {
 			sum += p;
