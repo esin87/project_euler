@@ -40,4 +40,6 @@ const getSumOfAllAmicableNums = (upperLimit) => {
 	return sum;
 };
 
-console.log(getSumOfAllAmicableNums(10000)); //31626
+// console.log(getSumOfAllAmicableNums(10000)); //31626
+
+module.exports = getSumOfDivisors;
