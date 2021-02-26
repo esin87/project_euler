@@ -1,5 +1,4 @@
 // 1000-digit Fibonacci number
-// Show HTML problem content
 // Problem 25
 // The Fibonacci sequence is defined by the recurrence relation:
 
