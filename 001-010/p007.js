@@ -33,7 +33,9 @@ const findNthPrime = (n) => {
 	return nthPrime;
 };
 
-console.log(findNthPrime(1)); //2
-console.log(findNthPrime(2)); //3
-console.log(findNthPrime(6)); //13
-console.log(findNthPrime(10001)); //104743
+// console.log(findNthPrime(1)); //2
+// console.log(findNthPrime(2)); //3
+// console.log(findNthPrime(6)); //13
+// console.log(findNthPrime(10001)); //104743
+
+module.exports = findNthPrime;
