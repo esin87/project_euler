@@ -21,10 +21,10 @@ const getDoubleBasePalindromes = (upperLimit) => {
 	let sum = 0;
 	// loop through base ten numbers up to upper limit
 	for (let i = 1; i < upperLimit; i += 2) {
-		// get number in base two
-		const baseTwo = getBaseTwoNum(i);
 		// check to see if both the number and its binary counterpart are palindromic
-		if (checkIfPalindrome(i) && checkIfPalindrome(baseTwo)) {
+		// small optimization here -- move the getBaseTwo function into the if statement
+		// that way we'll only need to convert the base ten number to binary if the base ten is a palindrome
+		if (checkIfPalindrome(i) && checkIfPalindrome(getBaseTwoNum(i))) {
 			// if so, add the number in base ten to sum
 			sum += i;
 		}
