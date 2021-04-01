@@ -7,7 +7,7 @@
 // How many circular primes are there below one million?
 
 // helper function to get permutations
-const getPermutations = (arr) => {
+const getRotations = (arr) => {
 	const results = [];
 	let count = 0;
 	while (count < arr.length) {
@@ -42,16 +42,14 @@ const getPrimes = (upperLimit) => {
 const getCircularPrimes = (upperLimit) => {
 	let count = 0;
 	const sieve = getPrimes(upperLimit);
-	const results = [];
 	// loop through array and check if all permutations of primes are true;
 	for (let i = 2; i < sieve.length; i++) {
 		// if the number is prime
 		if (sieve[i]) {
-			// get permutations of the number
-			const perms = getPermutations(i.toString().split(''));
+			// get rotations of the number
+			const perms = getRotations(i.toString().split(''));
 			if (perms.every((x) => sieve[x])) {
 				count += perms.length;
-				results.push(perms);
 				perms.forEach((x) => {
 					sieve[x] = false;
 				});
