@@ -11,18 +11,11 @@
 // isPandigital helper function checks to see if a given numerical string is 1-9 pandigital
 const isPandigital = (num) => {
 	// reference numerical array
-	const digits = '123456789'.split('');
+	const digits = '123456789';
 	// split and sort the input numerical string
-	const sortedNumArray = num.split('').sort();
-	// loop over reference array
-	for (let i = 0; i < digits.length; i++) {
-		// if the digits at a given index don't match, return false
-		if (digits[i] !== sortedNumArray[[i]]) {
-			return false;
-		}
-	}
-	// if for loop is done checking, return true
-	return true;
+	const sortedNumStr = num.split('').sort().join('');
+
+	return digits === sortedNumStr;
 };
 
 const getPanDigitalProducts = () => {
