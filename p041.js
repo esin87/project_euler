@@ -56,4 +56,4 @@ const getLargestPandigitalPrime = () => {
 	return max;
 };
 
-console.log(getLargestPandigitalPrime()); // 765413
+console.log(getLargestPandigitalPrime()); // 7652413
