@@ -4,10 +4,10 @@
 // It can be seen that the number, 125874, and its double, 251748, contain exactly the same digits, but in a different order.
 
 // Find the smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x, contain the same digits.
+const runFunction = require('../utils/performance');
 
 function getSmallestPermutedMultiple() {
-	// number has to have at least six digits
-	let i = 111111;
+	let i = 1;
 	while (true) {
 		const multiplesArr = generateMultiples(i);
 		const success = checkIfPermutations(multiplesArr);
