@@ -6,10 +6,11 @@
 // Find the smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x, contain the same digits.
 
 function getSmallestPermutedMultiple() {
-	let i = 1;
-	while (i < 142858) {
+	// number has to have at least six digits
+	let i = 111111;
+	while (true) {
 		const multiplesArr = generateMultiples(i);
-		const success = checkIfPalindromes(multiplesArr);
+		const success = checkIfPermutations(multiplesArr);
 		if (success) {
 			return multiplesArr[0];
 		} else {
@@ -26,7 +27,7 @@ function generateMultiples(i) {
 	return nums;
 }
 
-function checkIfPalindromes(arr) {
+function checkIfPermutations(arr) {
 	const sortedDigits = arr[0].toString().split('').sort();
 	const numStr = sortedDigits.join('');
 	for (let i = 1; i < arr.length; i++) {
@@ -39,4 +40,4 @@ function checkIfPalindromes(arr) {
 	return true;
 }
 
-console.log(getSmallestPermutedMultiple());
+console.log(getSmallestPermutedMultiple()); // 142857
